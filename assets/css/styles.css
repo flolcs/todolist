@@ -192,6 +192,7 @@ h2 {
     height: 40px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   .actions {
     justify-content: flex-end;
