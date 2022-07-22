@@ -1,0 +1,199 @@
+/*=============== FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --color1: #2f363e;
+  --color2: #FFFFFF;
+  --color3: #191919;
+  --color4 : #ff2972;
+  --color5: #fee800;
+  --color6: #04fc43;
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: var(--color3);
+}
+
+body {
+  font-family: "Poppins";
+  font-size: 1rem;
+  color: var(--color2);
+  background-color: var(--color3);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*=============== HEADER ===============*/
+header {
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#new-task-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#new-task-input {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  background-color: var(--color1);
+  padding: 10px;
+  color: var(--color2);
+}
+
+#new-task-input {
+  outline: none;
+}
+
+#new-task-input:active {
+  border: none;
+}
+
+#new-task-submit {
+  border: none;
+  height: 40px;
+  width: 100px;
+  color: var(--color6);
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#new-task-submit:hover {
+  border: solid 2px var(--color6);
+  border-radius: 10px;
+}
+
+/*=============== MAIN ===============*/
+.task-list {
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+#tasks {
+  width: 100%;
+}
+
+.task {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.content {
+  width: 100%;
+}
+
+#input-content {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: var(--color1);
+  border-radius: 10px;
+  color: var(--color2);
+  font-weight: 500;
+  padding: 10px;
+}
+
+#input-content:focus {
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-actions {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.edit {
+  color: var(--color5);
+}
+
+.edit:hover {
+  border: solid 2px var(--color5);
+  border-radius: 10px;
+}
+
+.delete {
+  color: var(--color4);
+}
+
+.delete:hover {
+  border: solid 2px var(--color4);
+  border-radius: 10px;
+}
+
+/*=============== FOOTER ===============*/
+
+/*=============== RESPONSIVE ===============*/
+@media (min-width: 1px) and (max-width: 768px) {
+  header {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+  .task-list {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 600px) {
+  .task {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .actions {
+    justify-content: flex-end;
+  }
+}
