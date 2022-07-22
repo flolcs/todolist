@@ -2,6 +2,9 @@ window.addEventListener("load", () => {
   const form = document.querySelector("#new-task-form");
   const input = document.querySelector("#new-task-input");
   const list_el = document.querySelector("#tasks");
+  const button_edit = document.querySelector(".edit");
+  const button_delete = document.querySelector(".delete");
+  const task = document.querySelector(".task");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -45,5 +48,20 @@ window.addEventListener("load", () => {
     task_el.appendChild(task_actions_el);
     task_actions_el.appendChild(btn_actions_edit);
     task_actions_el.appendChild(btn_actions_delete);
+
+    btn_actions_edit.addEventListener("click", () => {
+      if (btn_actions_edit.innerText == "Modifier") {
+        task_content_input.readOnly = false;
+        task_content_input.focus();
+        btn_actions_edit.innerText = "Sauvegarder";
+      } else {
+        task_content_input.readOnly = true;
+        btn_actions_edit.innerText = "Modifier";
+      }
+    });
+
+    btn_actions_delete.addEventListener("click", () => {
+      list_el.removeChild(task_el);
+    });
   });
 });
